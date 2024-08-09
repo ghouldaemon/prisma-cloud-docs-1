@@ -33,8 +33,9 @@ Installing Prisma Cloud scanner as a pre-receive hook on your local host enables
 . Navigate to the local folder housing the cloned repository and run the following command to build the image from the `Dockerfile.dev` file:
 +
 [source,shell]
+# Requires a "." or a PATH for the image. If not you receive errors
 ----
-docker build -f Dockerfile.dev -t pre-receive.dev
+docker build -f Dockerfile.dev -t pre-receive.dev .
 ----
 
 . Add executable permissions to the `checkov-pre-receive.sh` file:
